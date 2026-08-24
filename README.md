@@ -15,20 +15,12 @@ Edge detection is an image-processing technique used to identify boundaries and 
 SOBEL OPERATOR
 The Sobel operator detects edges by calculating the intensity gradient in the horizontal (X) and vertical (Y) directions.
 
-The Sobel X and Y gradients are calculated using 
-3
-×
-3
- kernels. These gradients are then combined to obtain the overall edge magnitude.
+The Sobel X and Y gradients are calculated using 3 × 3 kernels. These gradients are then combined to obtain the overall edge magnitude.
 
 Sobel edge detection is simple and provides good results while reducing the effect of noise to some extent.
 
 PREWITT OPERATOR
-The Prewitt operator is used to detect horizontal and vertical edges in an image. It uses two 
-3
-×
-3
- kernels to calculate the intensity gradients in the X and Y directions.
+The Prewitt operator is used to detect horizontal and vertical edges in an image. It uses two 3 × 3 kernels to calculate the intensity gradients in the X and Y directions.
 
 The resulting gradients are combined to identify the edges present in the image.
 
@@ -47,11 +39,12 @@ Edge tracking by hysteresis.
 In the program, threshold values of 100 and 200 are used for detecting the edges.
 
 COMPARISON OF EDGE DETECTION METHODS
-Sobel operator → Detects edges using horizontal and vertical gradients and is simple to implement.
-
-Prewitt operator → Uses predefined kernels to detect horizontal and vertical edges.
-
-Canny operator → Produces thinner, cleaner, and better-connected edges compared to Sobel and Prewitt.
+Operator	Description
+Sobel	Detects edges using horizontal and vertical gradients and is simple to implement.
+Prewitt	Uses predefined kernels to detect horizontal and vertical edges.
+Canny	Produces thinner, cleaner, and better-connected edges compared to Sobel and Prewitt.
 
 CONCLUSION
-The experiment demonstrates the application of Sobel, Prewitt, and Canny edge detection techniques on a grayscale image. Sobel and Prewitt are simple gradient-based methods for detecting edges, while Canny provides more accurate and well-defined edges. Among the three methods, Canny generally produces clearer and thinner edges, making it suitable for applications where precise edge detection is required.
+The experiment demonstrates the application of Sobel, Prewitt, and Canny edge detection techniques on a grayscale image. Sobel and Prewitt are simple gradient-based methods for detecting edges, while Canny provides more accurate and well-defined edges.
+
+Among the three methods, Canny generally produces clearer and thinner edges, making it suitable for applications where precise edge detection is required.
