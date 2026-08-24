@@ -1,106 +1,57 @@
-# Edge-detection
-Aim
-To implement and compare Sobel, Prewitt, and Canny edge detection techniques on a grayscale image using Python and OpenCV, and to visualize the detected edges alongside the original image.
+IMAGE EDGE DETECTION USING SOBEL, PREWITT AND CANNY OPERATORS
+AIM
+To demonstrate and compare the effect of Sobel, Prewitt, and Canny edge detection techniques on a grayscale image.
 
-Software Used
-Python 3
-Google Colab / Jupyter Notebook
-OpenCV (cv2) – for image processing and edge detection
-NumPy (numpy) – for numerical operations and defining Prewitt kernels
-Matplotlib (matplotlib.pyplot) – for displaying and comparing images
-Google Drive – for accessing the input image
-Theory
-Edge detection is an image-processing technique used to identify sharp changes in intensity or brightness in an image. Edges generally represent boundaries of objects, shapes, and important features.
+SOFTWARE USED
+Google Colab
+Python
+OpenCV (cv2)
+NumPy (numpy)
+Matplotlib (matplotlib.pyplot)
+THEORY
+EDGE DETECTION
+Edge detection is an image-processing technique used to identify boundaries and sharp changes in intensity within an image. It is commonly used to detect the shape, structure, and important features of objects in an image.
 
-1. Sobel Edge Detection
+SOBEL OPERATOR
 The Sobel operator detects edges by calculating the intensity gradient in the horizontal (X) and vertical (Y) directions.
 
-In the program:
-
-sobelX = cv2.Sobel(img, cv2.CV_64F, 1, 0, ksize=3)
-sobelY = cv2.Sobel(img, cv2.CV_64F, 0, 1, ksize=3)
-
-The X and Y gradients are combined using the magnitude:
-
-G
-=
-G
-x
-2
-+
-G
-y
-2
-
-Sobel provides good edge detection while reducing the effect of noise to some extent.
-
-2. Prewitt Edge Detection
-The Prewitt operator uses two 
+The Sobel X and Y gradients are calculated using 
 3
 ×
 3
- convolution kernels to detect horizontal and vertical edges.
+ kernels. These gradients are then combined to obtain the overall edge magnitude.
 
-The kernels used are:
+Sobel edge detection is simple and provides good results while reducing the effect of noise to some extent.
 
-K
-x
-=
-[
-1
-1
-1
-0
-0
-0
-−
-1
-−
-1
-−
-1
-]
+PREWITT OPERATOR
+The Prewitt operator is used to detect horizontal and vertical edges in an image. It uses two 
+3
+×
+3
+ kernels to calculate the intensity gradients in the X and Y directions.
 
-K
-y
-=
-[
-1
-0
-−
-1
-1
-0
-−
-1
-1
-0
-−
-1
-]
+The resulting gradients are combined to identify the edges present in the image.
 
-These kernels are applied to the image using cv2.filter2D(). The resulting gradients are then combined to obtain the detected edges.
+Prewitt is computationally simple and is useful for detecting basic edges and boundaries.
 
-3. Canny Edge Detection
-The Canny edge detector is a multi-stage edge detection technique. It generally involves:
+CANNY EDGE DETECTION
+Canny is a multi-stage edge detection technique used to produce thin and well-defined edges.
 
-Noise reduction using Gaussian filtering.
+The main steps involved in Canny edge detection are:
+
+Noise reduction using smoothing.
 Calculation of image gradients.
-Non-maximum suppression to obtain thin edges.
-Double thresholding to identify strong and weak edges.
+Non-maximum suppression.
+Double thresholding.
 Edge tracking by hysteresis.
-In the program:
+In the program, threshold values of 100 and 200 are used for detecting the edges.
 
-canny_edges = cv2.Canny(img, 100, 200)
+COMPARISON OF EDGE DETECTION METHODS
+Sobel operator → Detects edges using horizontal and vertical gradients and is simple to implement.
 
-The values 100 and 200 are the lower and upper threshold values used by the Canny detector.
+Prewitt operator → Uses predefined kernels to detect horizontal and vertical edges.
 
-Comparison
-Sobel detects edges using horizontal and vertical gradients and is relatively simple.
-Prewitt also uses gradient kernels and is computationally simple.
-Canny is more sophisticated and generally produces thinner, cleaner, and better-connected edges.
-Conclusion
-The program successfully applies Sobel, Prewitt, and Canny edge detection to the given grayscale bird image. The three methods demonstrate how different edge-detection operators identify boundaries and intensity changes. Among them, Canny generally provides the clearest and most well-defined edges, while Sobel and Prewitt are simpler gradient-based methods suitable for basic edge detection.
+Canny operator → Produces thinner, cleaner, and better-connected edges compared to Sobel and Prewitt.
 
-
-
+CONCLUSION
+The experiment demonstrates the application of Sobel, Prewitt, and Canny edge detection techniques on a grayscale image. Sobel and Prewitt are simple gradient-based methods for detecting edges, while Canny provides more accurate and well-defined edges. Among the three methods, Canny generally produces clearer and thinner edges, making it suitable for applications where precise edge detection is required.
