@@ -1,6 +1,8 @@
 IMAGE EDGE DETECTION USING SOBEL, PREWITT AND CANNY OPERATORS
 ![Uploading image.png…]()
 
+
+
 AIM
 
 To demonstrate and compare the effect of Sobel, Prewitt, and Canny edge detection techniques on a grayscale image.
