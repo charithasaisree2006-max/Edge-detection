@@ -1,5 +1,5 @@
 IMAGE EDGE DETECTION USING SOBEL, PREWITT AND CANNY OPERATORS
-![Uploading image.png…]()
+<img src="download.png" alt="Output image" width="700">
 
 
 # AIM
