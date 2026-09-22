@@ -1,6 +1,7 @@
 IMAGE EDGE DETECTION USING SOBEL, PREWITT AND CANNY OPERATORS
 ![Uploading image.png…]()
 
+
 # AIM
 
 To demonstrate and compare **image edge detection** using **Sobel, Prewitt, and Canny edge detection operators**.
